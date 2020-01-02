@@ -1,0 +1,16 @@
+server: 
+    port: 9001
+eureka: 
+ client: 
+  service-url: 
+   defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
+#指定eureka对外暴露的微服务名字
+spring: 
+ application: 
+  name: cloud-cosumer-dept-fegin
+  
+ #服务熔断与服务降级
+feign: 
+  hystrix: 
+    enabled: true
+  

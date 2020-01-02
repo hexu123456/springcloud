@@ -1,0 +1,43 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: cloud-provid-erdept #eureka对外暴露的微服务名字,不能变，只能是同一个才能实现负载均衡
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/springboot2?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations:
+  - classpath:mybatis/mapper/user.xml
+  
+ #将客户端注册到eureka服务器中
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://localhost:8004/eureka/  单个配置
+      #集群配置
+      defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
+  instance:
+    instance-id: cloud-provider-dept8003 #改变客户端在服务端显示的名称
+    prefer-ip-address: true #访问路径显示IP地址
+    
+#此处为路径下的访问路径比如我的http://192.168.1.107:8004/actuator/info
+info: 
+   app.name: atguigu-microservicecloud
+   company.name: www.atguigu.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+    
+    
+    

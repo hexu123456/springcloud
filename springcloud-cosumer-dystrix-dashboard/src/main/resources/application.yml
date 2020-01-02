@@ -1,0 +1,6 @@
+server: 
+    port: 6001
+spring: 
+  application: 
+    name: springcloud-cosumer-dystrix-dashboard # 指定应用名称
+  
