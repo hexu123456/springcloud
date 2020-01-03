@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 //测试git163
+//我是qq邮箱提交的
 @EnableEurekaClient//将服务注册到eureka注册中心
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableZuulProxy
