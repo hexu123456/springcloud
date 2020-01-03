@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.hx</groupId>
+    <artifactId>springcloud</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>springcloud-client-config-3355</artifactId>
+  <dependencies>
+        <!--springcloud-config客户端  -->
+        <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!--避免config的git插件报错  -->
+        <dependency>
+          <groupId>org.eclipse.jgit</groupId>
+          <artifactId>org.eclipse.jgit</artifactId>
+          <version>4.10.0.201712302008-r</version>
+        </dependency>
+        <dependency><!--数据监控和友好的图形化界面支持--><!--http://localhost:8031/hystrix.stream-->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId> spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
+
+        <dependency><!--监控依赖--><!--http://localhost:8030/hystrix.stream-->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+             <!-- eureka-server服务端 -->
+     <dependency>
+       <groupId>org.springframework.cloud</groupId>
+       <artifactId>spring-cloud-starter-eureka-server</artifactId>
+     </dependency>
+	    <!--热部署  -->
+		<dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>springloaded</artifactId>
+		</dependency>
+		<dependency>
+		   <groupId>org.springframework.boot</groupId>
+		   <artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+  </dependencies>
+</project>

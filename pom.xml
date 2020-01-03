@@ -82,5 +82,7 @@
     	<module>springcloud-cosumer-dystrix-dashboard</module>
     	<module>springcloud-zuul-gateway-9527</module>
     	<module>springcloud-zuul-gateway9527</module>
+    	<module>springcloud-config-3344</module>
+    	<module>springcloud-client-config-3355</module>
     </modules>
 </project>

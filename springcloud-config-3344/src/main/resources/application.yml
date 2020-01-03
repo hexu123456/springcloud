@@ -1,0 +1,12 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: springcloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hexu123456/springcloudconfig.git  #github仓库上的名字
+          
